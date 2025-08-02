@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhupender Kaushal Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e3f0ff 0%, #b6d0f7 100%);
+      color: #1e293b;
+      min-height: 100vh;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 370px;
+      height: 100vh;
+      background: linear-gradient(180deg, #2563eb 0%, #60a5fa 100%);
+      color: #f8fafc;
+      box-shadow: 2px 0 16px 0 rgba(30,58,138,0.12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 18px 24px 18px;
+      box-sizing: border-box;
+      z-index: 1000;
+      overflow: hidden;
+      will-change: transform;
+    }
+    .sidebar .profile-pic {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #00070a;
+      background: #fff;
+      margin-bottom: 18px;
+    }
+    .sidebar .name-title {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .sidebar .name-title span {
+      font-size: 1.12em;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(30,58,138,0.10);
+      letter-spacing: 0.5px;
+    }
+    .sidebar .name-title small {
+      font-size: 0.95em;
+      color: #dbeafe;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+    }
+    .sidebar .details {
+      margin: 18px 0 18px 0;
+      font-size: 0.98em;
+      color: #e0e7ef;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .sidebar .contact-strip {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 18px;
+      width: 100%;
+    }
+    .sidebar .contact-strip a, .sidebar .contact-strip span {
+      color: #f8fafc;
+      text-decoration: none;
+      font-size: 0.98em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+      font-weight: 400;
+      letter-spacing: 0.1px;
+    }
+    .sidebar .contact-strip a:hover {
+      color: #bae6fd;
+    }
+    .main {
+      background: rgba(30,58,138,0.04);
+      border-radius: 16px;
+      box-shadow: 0 4px 24px 0 rgba(30,58,138,0.10);
+      padding: 28px 18px;
+      max-width: 620px;
+      width: 100%;
+      text-align: center;
+      margin: 48px auto 32px 300px;
+      font-size: 0.98em;
+      min-height: 80vh;
+      color: #1e293b;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0;
+      font-family: inherit;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #1e293b;
+    }
+    h1 { font-size: 1.25em; }
+    h2 { font-size: 1.08em; }
+    h3 { font-size: 1em; }
+    .icon {
+      display: inline-block;
+      margin: 0 8px 0 0;
+      font-size: 1em;
+      color: #2563eb;
+      background: #e0e7ef;
+      border-radius: 50%;
+      padding: 7px;
+      box-shadow: 0 2px 8px 0 rgba(59,130,246,0.10);
+      transition: transform 0.2s, box-shadow 0.2s;
+      vertical-align: middle;
+    }
+    .icon:hover {
+      transform: scale(1.12) rotate(-6deg);
+      box-shadow: 0 6px 18px 0 #2563eb;
+    }
+    .section {
+      margin-bottom: 24px;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .skills-list li {
+      background: #dbeafe;
+      color: #2563eb;
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-weight: 500;
+      font-size: 0.92em;
+      box-shadow: 0 1px 4px 0 rgba(30,58,138,0.06);
+    }
+    a {
+      color: #2563eb;
+      text-decoration: underline;
+      transition: color 0.2s;
+      font-size: 0.98em;
+    }
+    a:hover {
+      color: #1e40af;
+    }
+    @media (max-width: 900px) {
+      .sidebar { position: static; width: 100vw; height: auto; flex-direction: row; justify-content: flex-start; padding: 18px 2vw; overflow: visible; }
+      .sidebar .profile-pic { width: 60px; height: 60px; margin-bottom: 0; }
+      .sidebar .name-title { margin-bottom: 0; margin-left: 12px; text-align: left; }
+      .sidebar .contact-strip { flex-direction: row; align-items: center; margin-top: 0; margin-left: 24px; }
+      .main { max-width: 98vw; padding: 10px 2vw; margin: 24px auto 24px auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile Photo" class="profile-pic">
+    <div class="name-title">
+      <span>Dr. Bhupender Kaushal</span>
+      <small>Researcher in Computer Science & Artificial Intelligence</small>
+    </div>
+    <div class="details">
+      <div>Dedicated researcher with a passion for advancing the field of computer science and artificial intelligence.</div>
+    </div>
+    <div class="contact-strip">
+      <span><i class="fas fa-envelope"></i> bhupenderkaushal@yahoo.com</span>
+      <a href="https://linkedin.com/bhupenderkaushal" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+      <a href="https://scholar.google.com/" target="_blank"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
+    </div>
+  </div>
+  <div class="main">
+    <div class="section">
+      <h2><span class="icon"><i class="fas fa-user"></i></span> About</h2>
+      <p style="font-size:1.08em; line-height:1.6;">I am a dedicated researcher with a passion for advancing the field of computer science and artificial intelligence. My work focuses on developing innovative algorithms, publishing in top-tier journals, and collaborating with interdisciplinary teams to solve real-world problems.</p>
+    </div>
+    <div class="section">
+      <h2><span class="icon"><i class="fas fa-flask"></i></span> Research Interests</h2>
+      <ul style="padding-left:0;list-style:none; font-size:1.05em;">
+        <li>• Machine Learning & Deep Learning</li>
+        <li>• Natural Language Processing</li>
+        <li>• Data Science & Big Data Analytics</li>
+        <li>• Computer Vision</li>
+        <li>• Algorithm Design</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2><span class="icon"><i class="fas fa-book"></i></span> Publications</h2>
+      <ul style="padding-left:0;list-style:none; font-size:1.05em;">
+        <li><b>Title of Paper 1</b> <br><span style="font-size:0.95em; color:#b2ebf2;">Journal Name, Year</span></li>
+        <li><b>Title of Paper 2</b> <br><span style="font-size:0.95em; color:#b2ebf2;">Conference Name, Year</span></li>
+        <li><b>Title of Paper 3</b> <br><span style="font-size:0.95em; color:#b2ebf2;">Journal Name, Year</span></li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2><span class="icon"><i class="fas fa-project-diagram"></i></span> Projects</h2>
+      <ul style="padding-left:0;list-style:none; font-size:1.05em;">
+        <li><b>Project Name 1</b>: Short description of your research project. <a href="#"><i class="fab fa-github icon"></i>GitHub</a></li>
+        <li><b>Project Name 2</b>: Short description of another project. <a href="#"><i class="fab fa-github icon"></i>GitHub</a></li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2><span class="icon"><i class="fas fa-award"></i></span> Skills & Tools</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>R</li>
+        <li>TensorFlow</li>
+        <li>PyTorch</li>
+        <li>Scikit-learn</li>
+        <li>LaTeX</li>
+        <li>Data Visualization</li>
+        <li>Research Writing</li>
+      </ul>
+    </div>
+    <!-- Contact section is now in the top strip -->
+  </div>
+</body>
+</html>
