@@ -17,5 +17,5 @@ Hi! I'm Bhupender Kaushal, a passionate developer. I love building projects and 
 - Git, GitHub, Jekyll
 
 ## Contact
-- Email: your.email@example.com
-- [LinkedIn](#)
+- Email: bhupenderkaushal@yahoo.com
+- [LinkedIn](linkedin.com/bhupenderkaushal)
